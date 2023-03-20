@@ -24,6 +24,24 @@ class Card {
     int suit;
     int rank;
 
+    public int compareTo(Card c) {
+        if ( suit < c.suit) {
+            return -1;
+        } else if (suit > c.suit) {
+            return 1;
+        } else {
+            if (rank == c.rank) {
+                return 0;
+            } else if (c.rank == 1) {
+                return -1;
+            } else if (rank == 1 || rank > c.rank) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return suits[suit] + " " + ranks[rank-1];
