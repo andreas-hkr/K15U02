@@ -10,7 +10,7 @@ public class Main {
     }
 }
 
-class Card {
+class Card implements Comparable<Card> {
     static final int CLUBS = 0;
     static final int DIAMONDS = 1;
     static final int HEARTS = 2;
